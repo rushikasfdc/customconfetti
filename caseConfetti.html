@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Case Details">
+      <div class="slds-p-around_medium">
+        <lightning-record-edit-form record-id={recordId} object-api-name="Case" onsuccess={handleSuccess}>
+          <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 hidden-field">
+                <lightning-input-field  field-name="Status" value="Closed" disabled ></lightning-input-field>
+            </div>
+            <div class="slds-col slds-p-horizontal_medium">
+                <lightning-input-field field-name="Product_Topics1__c" value={Product_Topics1__c} required></lightning-input-field>
+            </div>
+            <div class="slds-col slds-p-horizontal_medium">
+                <lightning-input-field field-name="Product_Feature__c" value={Product_Feature__c} required></lightning-input-field>
+            </div>
+            <!-- <div class="slds-col slds-size_1-of-2">
+              <lightning-input-field field-name="Product_Topics1__c" value={Product_Topics1__c} required></lightning-input-field>
+              <lightning-input-field field-name="Product_Feature__c" value={Product_Feature__c} required></lightning-input-field>
+            </div> -->
+            <div class="slds-col slds-size_1-of-1">
+              <lightning-input-field field-name="Reason" value={Reason} required></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-1">
+            <lightning-input-field field-name="Comments__c" value={Comments__c}></lightning-input-field>
+               </div>
+
+            <!-- <div class="slds-col slds-size_1-of-1">
+              <lightning-input-field field-name="Description" value={description} required></lightning-input-field>
+            </div> -->
+          
+          </div>
+          <ul class="slds-button-group-row">
+            <li class="slds-button-group-item">
+                <button class="slds-button slds-button_brand" type="submit" label="Save"  onclick={handleSave}></button>        
+            </li>
+            <li class="slds-button-group-item">
+                <lightning-button type="cancel" label="Cancel" variant="brand" onclick={handleCancel}></lightning-button>
+    
+            </li>
+            <!-- <lightning-button type="cancel" label="Cancel" variant="brand" onclick={handleCancel}></lightning-button> -->
+    
+          </ul>
+          
+        </lightning-record-edit-form>
+      </div>
+    </lightning-card>
+</template>

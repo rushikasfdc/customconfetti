@@ -1,0 +1,25 @@
+.slds-p-around_medium {
+    padding: 1rem;
+}
+
+.slds-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .hidden-field {
+        display: none;
+} */
+
+
+.slds-col {
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.slds-size_1-of-1 {
+    flex-basis: 100%;
+}
+
+.slds-size_1-of-2 {
+    flex-basis: 50%;
+}
